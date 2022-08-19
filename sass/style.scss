@@ -1,0 +1,235 @@
+@import "mobile";
+@import "tablet";
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+ $primary-color : hsl(0, 0%, 98%);
+ $second-color: hsl(0, 0%, 41%);
+ $thied-color: hsl(0, 0%, 8%);
+ *{
+font-size: 18px;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Epilogue', sans-serif;
+color:$second-color;
+}
+
+/* navbar*/
+.menu{
+    display: none;
+}
+.logo-navbar{
+    display: flex;
+    flex-direction: row;
+    padding:  3rem 0rem 3rem 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem; 
+    
+
+    .logo{
+        margin:10px 70px;
+        height: 100%;
+    }
+}
+nav{
+    display: flex;
+    ul{
+        padding: 10px 0px;
+        margin-right:45px ;
+        cursor: pointer;
+        .up-arrow{
+            display:none;
+        }
+        ul:hover >.down-arrow{
+            display: none;
+        }
+
+        .features-list{
+            display: none;
+            list-style: none;
+            position: absolute;
+            background-color: white;
+            top:80px;
+            left:150px;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow: 0px 5px 15px rgba(105, 105, 105, 0.377);
+            li{
+               padding: 0.5rem 0rem;
+               a{
+                text-decoration: none;
+                transition: 0.3s;
+               }
+               a:hover{
+                color: $thied-color;
+                padding-left:5px ;
+                transition: 0.3s;
+            }
+               img{
+                padding: 0 10px;
+               }
+            }
+        }
+        .company-list{
+            display: none;
+            list-style: none;
+            position: absolute;
+            background-color: white;
+            top:80px;
+            left:370px;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(105, 105, 105, 0.377);
+            li{
+                    padding: 0.5rem 0rem;
+                a{
+                    text-decoration: none;
+                    transition: 0.3s;
+                   }
+                   a:hover{
+                    color: $thied-color;
+                    padding-left:5px ;
+                    transition: 0.3s;
+                }
+                
+                img{
+                 padding: 0 10px;
+                }
+             }
+        }
+    }
+
+    ul:hover{
+        color: $thied-color;
+    }
+    ul:hover >.features-list{
+        display: block;
+        animation: fadeIn 0.4s;
+    }
+   
+    ul:hover >.company-list{
+        display: block;
+        animation: fadeIn 0.4s;
+    }
+    ul:hover >.down-arrow{
+        display: none;
+    }
+    ul:hover >.up-arrow{
+        display: inline;
+    }
+    
+
+    @keyframes fadeIn { /* Fade In*/
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+ }
+
+
+}
+
+.login-register{
+    display: flex;
+    nav{
+        justify-content: center;
+        ul{
+            display: flex;
+            li{
+                border: 2px solid transparent;
+                color:$thied-color;
+                text-decoration: none;
+                padding: 10px 25px;
+                display: flex;
+                border-radius: 10px;
+                color: $second-color;
+                transition: 0.4s;
+            }
+            li:hover{
+                border: 2px solid ;
+                border-color: $thied-color;
+                border-radius: 10px;
+                color: $thied-color;
+                transition: 0.4s;
+
+            }
+          
+        }
+    }
+}
+// navbar
+// container
+.paragraph{
+    display: flex;
+    flex-direction: row;
+    
+}
+section{
+    width: 100%;
+    .container{
+        margin: 0rem 9rem;
+        .col-1{
+            width:50%;
+            
+           
+            h1{
+                margin-top:8rem ;
+                color: $thied-color;
+                font-size:  5rem;
+                width: 75%;
+            }
+            p{
+                width: 60%;
+                line-height: 1.5rem;
+            }
+            
+            button.learn{
+                margin-top: 5rem;
+                padding: 1rem 2rem;
+                border-radius: 15px;
+                border: 1px solid black;
+                font-weight: 700;
+                color: $primary-color;
+                background-color: $thied-color;
+                cursor: pointer;
+                transition: 0.2s;
+                
+            }
+            button.learn:hover{
+                background-color: $primary-color;
+                transition: 0.2s;
+                color: $thied-color;
+            }
+        }
+ 
+            
+            .credit-sponser{
+                display: flex;
+          
+            align-items: flex-end;
+                img{
+                    margin: 0rem 1rem;
+                }
+            }
+     
+        .col-2{
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            img.desktop{
+                width: 550px;
+                height: 800px;
+            }
+            .mobile{
+                display: none;
+            }
+        }
+    }
+
+}
